@@ -19,19 +19,31 @@ title: Home
   {% endfor %}
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+<div>
+  <h1>About me</h1>
+  <hr>
+  <p>Apasionado por el desarrollo de software y la resolución de problemas mediante ciencias computacionales, interesado en el aprendizaje continuo de las herramientas tecnológicas que están a la vanguardia, los marcos de trabajo que ayudan a realizar tareas con mayor efectividad y todas aquellas habilidades para trabajar en equipo, adaptarse a los cambios y generar conocimiento.</p>
+  <h2>Formación Académica:</h2>
+  <p>“Ingeniero en Sistemas, 2019, Universidad De Pamplona, Pamplona, Norte de Santander".</p>
+  <h2>Aptitudes</h2>
+  <p>
+    <ul>
+      <li>Buenas prácticas.</li>
+      <li>Marcos de trabajo agiles.</li>
+      <li>Gestión de tiempo.</li>
+      <li>Resolución de problemas.</li>
+    </ul>
+  </p>
+  <h2>Idiomas:</h2>
+  <p>Manejo del idioma ingles en un nivel intermedio.</p>
+  <h2>Experiencia:</h2>
+  <p>
+    Ingeniero de Desarrollo en Neptuno Smart System S.A.S (1 de abril de 2019 hasta la actualidad),
+    <ul>
+      <li>Desarrollar soluciones web en .Net para gestionar tránsitos nacionales bajo tecnologías Microsoft usando Asp.Net Core, Clean Architecture y la nube de Azure.</li> 
+      <li>Devops con la plataforma de Azure.</li> 
+      <li>Desarrollo de Api-Rest para los servicios que se requerían.</li>
+      <li>Implementar y gestionar correctamente servicios cloud como app services, logic apps, bases de datos, storages accounts y conexiones con servicios de terceros.  </li>
+    </ul>
+</p>
 </div>
