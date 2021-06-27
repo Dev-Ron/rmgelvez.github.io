@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Prueba
 ---
 Hola Mundo
 <p class="message">

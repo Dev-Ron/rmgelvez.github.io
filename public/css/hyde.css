@@ -2,6 +2,8 @@
 html {
   font-family: Helvetica;
 }
+
+
 @media (min-width: 48em) {
   html {
     font-size: 16px;
@@ -13,12 +15,16 @@ html {
   }
 }
 
-.h1{
+.lead{
   text-align: center;
 }
 
-.h2 .p{
-  text-align: left;
+h1{
+  text-align: center;
+}
+
+p{
+  text-align: justify;
 }
 
 .sidebar {
@@ -75,6 +81,7 @@ margin-top: 50px;
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
+  align-items: center;
 }
 .sidebar-nav-item {
   display: block;
@@ -131,4 +138,7 @@ margin-top: 50px;
   }
 } */
 
+[class^="bi-"]::before, [class*=" bi-"]::before{
+  margin-right: 20px;
+}
 
