@@ -4,11 +4,19 @@ title: Home
 ---
 
 <div>
-  <h1 class="bi-person">Sobre mí</h1>
   <br>
   <h3>Hola, soy Ronal.</h3>
   <br>
-  <p>I'm passionate about technology and how it helps us solve problems, for this reason i'm a software developer, i'm interested in continuously learning the avant-garde tools, the techniques to improve productivity and my mainly goal is to generate knowledge.</p>
+
+  <figure class="person">
+    <div>
+      <img src="{{ site.baseurl }}public/FotoReal.png" alt="">
+    </div>
+  </figure>
+
+  <br>
+  <p>
+    I'm passionate about technology and how it helps us to solve problems, for this reason i'm a software developer, i'm interested in continuously learning on the avant-garde tools, the techniques to improve productivity and my mainly goal is to generate knowledge.</p>
   <hr>
 
   <h2 class="bi-book">Formación Académica:</h2>
@@ -71,6 +79,53 @@ title: Home
 
 </div>
 
+
+
+
+
+<style>
+.person {
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  padding-block-start: 4rem;
+  border-radius: 100%;
+  transform: scale(var(--scale));
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-origin: 50% calc(50% + 4rem);
+  will-change: transform;
+}
+
+.person > div {
+  display: grid;
+  place-content: center;
+  border-radius: 9999px;
+  width: 280px;
+  height: 280px;
+  background: conic-gradient(at 125% 50%, #b78cf7, #ff7c94, #ffcf0d, #ff7c94, #b78cf7) border-box;
+  box-shadow: inset 0 -2px 0 1px #0001;
+}
+
+.person img {
+  justify-self: center;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+  transform: translateY(var(--translateY, 5%));
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  filter: var(--ds);
+  will-change: transform, filter;
+  border-radius: 25%;
+}
+
+
+.person:hover {
+  --scale: 1.15;
+  --translateY: -4%;
+  --ds: drop-shadow(2px 5px 5px #0004);
+}
+</style>
 
 
 

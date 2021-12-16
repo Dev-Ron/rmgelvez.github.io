@@ -1,0 +1,69 @@
+<!-- ---
+layout: page
+title: Prueba Foto Perfil
+---
+ -->
+
+
+<figure class="person">
+  <div>
+    <img src="{{ site.baseurl }}public/Pruebas.png" alt="">
+  </div>
+</figure>
+
+
+
+
+  <style>
+.person {
+  overflow: hidden;
+  padding-block-start: 4rem;
+  border-radius: 0 0 9999px 9999px;
+  transform: scale(var(--scale));
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-origin: 50% calc(50% + 4rem);
+  will-change: transform;
+}
+
+.person > div {
+  display: grid;
+  place-content: center;
+  border-radius: 9999px;
+  width: 280px;
+  height: 280px;
+  background: conic-gradient(at 125% 50%, #b78cf7, #ff7c94, #ffcf0d, #ff7c94, #b78cf7) border-box;
+  box-shadow: inset 0 -2px 0 1px #0001;
+}
+
+.person img {
+  justify-self: center;
+  width: 125%;
+  max-width: none;
+  object-fit: cover;
+  transform: translateY(var(--translateY, 5%));
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  filter: var(--ds);
+  will-change: transform, filter;
+}
+
+
+.person:hover {
+  --scale: 1.15;
+  --translateY: -4%;
+  --ds: drop-shadow(2px 5px 5px #0004);
+}
+
+
+
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  place-content: center;
+}
+  </style>

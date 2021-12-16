@@ -7,10 +7,26 @@
         
       </h1>
 
-      <div class="circular--landscape">
-        <img src="{{ site.baseurl }}public/Pruebas.png" >
-      </div>
-      
+        <svg xmlns="{{ site.baseurl }}public/Perfil.svg" viewBox="0 -10 100 120" width="213" class="image">
+          <title>This is an image title</title>
+          <desc>This is an image description</desc>
+          <defs>
+            <clipPath id="maskImage" clipPathUnits="userSpaceOnUse">
+              <path d="M100 63A50 50 0 110 70C0 42 20 0 48 0c27 0 52 42 52 70z" />
+            </clipPath>
+            <clipPath id="maskBackground" clipPathUnits="userSpaceOnUse">
+              <path d="M190 101a50 50 0 01-50 50 50 50 0 01-50-50 50 50 0 0150-50 50 50 0 0150 50z" />
+            </clipPath>
+          </defs>
+          <!-- Background image -->
+          <g clip-path="url(#maskImage)" transform="translate(0 -7)">
+            <image clip-path="url(#maskBackground)" width="120" height="120" x="70" y="38" href="https://res.cloudinary.com/dazdt97d3/image/upload/v1615813805/background.png" transform="translate(-90 -31)" />
+          <!-- Foreground image -->
+            <image width="120" height="144" x="-15" y="0" fill="none" class="image__foreground" href="{{ site.baseurl }}public/Pruebas.png" />
+          </g>
+        </svg>
+
+    
       <p class="lead">{{ site.description }}</p>
     </div>
 
@@ -54,5 +70,34 @@ font-family: Anita;
 
 src: url("{{ site.baseurl }}public/Anita_Jane.otf");
 
+}
+
+
+.image {
+  transform: scale(0.9, 0.9);
+  transition: transform 0.2s ease-in;
+}
+
+.image__foreground {
+  transform-origin: 50% 50%;
+  transform: translateY(4px) scale(1, 1);
+  transition: transform 0.2s ease-in;
+}
+
+.image:hover {
+  transform: scale(1, 1);
+}
+
+.image:hover .image__foreground {
+  transform: translateY(-7px) scale(1.05, 1.05);
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 </style>
